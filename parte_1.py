@@ -3,11 +3,11 @@ from math import inf
 from timeit import default_timer
 
 class Graph():
-    c = dict()  # parejas laves:valor para cada arco (i,j) con su peso
 
     def __init__(self):
         self.V = set()
         self.E = set()
+        self.c = dict()  # parejas laves:valor para cada arco (i,j) con su peso
 
     def add_vertex(self, v):
         self.V.add(v)
