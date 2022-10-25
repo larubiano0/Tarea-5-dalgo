@@ -2,6 +2,10 @@
 # Edit at https://www.toptal.com/developers/gitignore?templates=python
 
 distances5.txt
+results_1.txt
+results_2.txt
+results_3.txt
+distances7.txt
 distances100_costosminimos.txt
 distances100.txt
 distances1000_202110_costosminimos.
@@ -9,6 +13,7 @@ distances1000_202110.txt
 distances1000_202110_costosminimos.txt
 distancesDisconnected.txt
 ISIS1105-202220-Tarea5.pdf
+cycles.txt
 
 .DS_store 
 

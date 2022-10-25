@@ -128,9 +128,11 @@ def main():
     s+=matrix_to_string(min_cost_bellman_ford) + '\n'*2
     s+='Floyd Warshall:' + '\n'
     s+=matrix_to_string(min_cost_floyd_warshall) + '\n'*2
-    text_file = open('results.txt', 'wt')
+    text_file = open('results_1.txt', 'wt')
     text_file.write(s)
     text_file.close()
+
+    print('Se ha creado el archivo results_1.txt con los resultados')
 
 if __name__ == "__main__":
     main()
