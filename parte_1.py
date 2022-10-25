@@ -2,6 +2,7 @@ import sys
 from math import inf
 from timeit import default_timer
 
+
 class Graph():
 
     def __init__(self):
@@ -121,18 +122,19 @@ def main():
     print(f"Tiempo total: {(t_3-t_0):.9f} s")
 
     s = ''
-    s+='A continuación se muestra la matriz de costos mínimos para cada nodo usando cada uno de los algoritmos:' + '\n'*2
-    s+='Dijkstra:' + '\n'
-    s+=matrix_to_string(min_cost_dijkstra) + '\n'*2
-    s+='Bellman Ford:' + '\n'
-    s+=matrix_to_string(min_cost_bellman_ford) + '\n'*2
-    s+='Floyd Warshall:' + '\n'
-    s+=matrix_to_string(min_cost_floyd_warshall) + '\n'*2
+    s += 'A continuación se muestra la matriz de costos mínimos para cada nodo usando cada uno de los algoritmos:' + '\n'*2
+    s += 'Dijkstra:' + '\n'
+    s += matrix_to_string(min_cost_dijkstra) + '\n'*2
+    s += 'Bellman Ford:' + '\n'
+    s += matrix_to_string(min_cost_bellman_ford) + '\n'*2
+    s += 'Floyd Warshall:' + '\n'
+    s += matrix_to_string(min_cost_floyd_warshall) + '\n'*2
     text_file = open('results_1.txt', 'wt')
     text_file.write(s)
     text_file.close()
 
     print('Se ha creado el archivo results_1.txt con los resultados')
+
 
 if __name__ == "__main__":
     main()
