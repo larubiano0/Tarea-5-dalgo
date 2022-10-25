@@ -7,7 +7,7 @@ class Graph():
     def __init__(self):
         self.V = set()
         self.E = set()
-        self.c = dict()  # parejas laves:valor para cada arco (i,j) con su peso
+        self.c = dict()  # parejas llaves:valor para cada arco (i,j) con su peso
 
     def add_vertex(self, v):
         self.V.add(v)
@@ -112,8 +112,6 @@ def main():
 
     # Construcción de la matriz de costos mínimos para cada nodo usando Floyd Warshall
     min_cost_floyd_warshall = graph.floyd_warshall()
-    min_cost_floyd_warshall = [[j for j in i]
-                               for i in min_cost_floyd_warshall]
 
     t_3 = default_timer()
 
@@ -122,7 +120,7 @@ def main():
     print(f"Floyd Warshall tomó: {(t_3-t_2):.9f} s")
     print(f"Tiempo total: {(t_3-t_0):.9f} s")
 
-    s = ""
+    s = ''
     s+='A continuación se muestra la matriz de costos mínimos para cada nodo usando cada uno de los algoritmos:' + '\n'*2
     s+='Dijkstra:' + '\n'
     s+=matrix_to_string(min_cost_dijkstra) + '\n'*2
@@ -130,7 +128,7 @@ def main():
     s+=matrix_to_string(min_cost_bellman_ford) + '\n'*2
     s+='Floyd Warshall:' + '\n'
     s+=matrix_to_string(min_cost_floyd_warshall) + '\n'*2
-    text_file = open("results.txt", "wt")
+    text_file = open('results.txt', 'wt')
     text_file.write(s)
     text_file.close()
 
